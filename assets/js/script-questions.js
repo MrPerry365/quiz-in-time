@@ -1,3 +1,4 @@
+// make arrays for 5 questions and answers //
 let questions = [
 
     {
