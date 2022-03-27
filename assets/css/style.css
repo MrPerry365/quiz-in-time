@@ -1,0 +1,38 @@
+/* body */
+
+/* * */
+
+/* would you like to play */
+
+/* question section */
+
+/* high score */
+
+/* time left */
+
+/* header */
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkmagenta;
+    color: #ffffff;
+    text-align: center;
+    margin:2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+
+}
+
+main {
+    background-color: lightslategray;
+    padding:20px;
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1rem;
+}
+/* correct or wrong */
+
+
+/* final score */
