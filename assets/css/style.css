@@ -30,7 +30,18 @@ main {
     margin: 2rem;
     justify-content: center;
     text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
     border-radius: 1rem;
+    list-style-type: none;
+}
+
+button {
+    font-size: large;
+    font-weight: bold;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background-color: bisque;
 }
 /* correct or wrong */
 

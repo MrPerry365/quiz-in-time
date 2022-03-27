@@ -1,25 +1,28 @@
-// 
 
+// make a function to check if question is correct. if so go to next question. if not deduct time and then go to next question//
+
+// make a function to start quiz and timer when the start quiz button is clicked, once answered go to next question //
 // clicking button displays high scores//
 const highButton = document.getElementById('high-scores')
-
 highButton.addEventListener('click', highScores)
 
 function highScores() {
 console.log('Boom Boom!')
-}
-// make a function to check if question is correct. if so go to next question. if not deduct time and then go to next question//
 
-// make a function to start quiz and timer when the start quiz button is clicked, once answered go to next question //
+
+}
+
 
 //$('#start-button').on('click') === startTimer ++ startQuiz
-const startButton = document.getElementById('start-button')
+const startButton = document.getElementById('startQuiz')
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
     console.log('Bang!!')
-    startButton.class
+    
+
+    
 
         
     
