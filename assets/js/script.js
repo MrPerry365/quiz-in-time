@@ -25,6 +25,7 @@ startButton.addEventListener('click', startQuiz)
 // };
 
 function startQuiz() {
+    startButton('clicked');
     
        
 }
@@ -32,19 +33,19 @@ function startQuiz() {
 
 //make 60 second countdown timer with stop function when all questions are answered or out of time//
 
-    function startTimer(seconds) {
-    let time = seconds;
+    // function startTimer(seconds) {
+    // let time = seconds;
 
-    const interval = setInterval(()) ==> {
-        counter--;
+    // const interval = setInterval(()) ==> {
+    //     counter--;
 
-        if(counter =< 0 ) {
-            clearInterval(interval)
-        }
-    }
-    } 1000;
+    //     if(counter =< 0 ) {
+    //         clearInterval(interval)
+    //     }
+    // }
+    // } 1000;
 
-    startTimer(60);    
+    // startTimer(60000);    
 
 
 //make function to replace high score with input text if true. if false prompt try again button//
