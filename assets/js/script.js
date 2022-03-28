@@ -1,54 +1,56 @@
+// list of id's
+const startButton = document.getElementById('startQuiz')
+const highButton = document.getElementById('high-scores')
+
 
 // make a function to check if question is correct. if so go to next question. if not deduct time and then go to next question//
 
 // make a function to start quiz and timer when the start quiz button is clicked, once answered go to next question //
 // clicking button displays high scores//
-const highButton = document.getElementById('high-scores')
+
 highButton.addEventListener('click', highScores)
+startButton.addEventListener('click', startQuiz)
 
 function highScores() {
 console.log('Boom Boom!')
+if {
+    timeLeft > 0 ++ timeLeft > highScores(log.value);
 
-
+    else {
+        return
+    }
 }
-
-
-//$('#start-button').on('click') === startTimer ++ startQuiz
-const startButton = document.getElementById('startQuiz')
-
-startButton.addEventListener('click', startQuiz)
+};
 
 function startQuiz() {
     console.log('Bang!!')
     
-
-    
-
-        
-    
+       
 }
 
 
-// make 60 second countdown timer with stop function when all questions are answered or out of time//
-    // function startTimer(seconds) {
-    // let time = seconds;
+//make 60 second countdown timer with stop function when all questions are answered or out of time//
 
-    // const interval = setInterval(()) ==> {
-    //     counter--;
+    function startTimer(seconds) {
+    let time = seconds;
 
-    //     if(counter <0 ) {
-    //         clearInterval(interval)
-    //     }
-    // }
-    // }, 1000;
+    const interval = setInterval(()) ==> {
+        counter--;
 
-    // startTimer(60);    
+        if(counter =< 0 ) {
+            clearInterval(interval)
+        }
+    }
+    }, 1000;
+
+    startTimer(60);    
 
 
-// make function to replace high score with input text if true. if false prompt try again button//
+//make function to replace high score with input text if true. if false prompt try again button//
 
-//
-// make arrays for 5 questions and answers //
+
+//make arrays for 5 questions and answers //
+
 let questions = [
 
     {
