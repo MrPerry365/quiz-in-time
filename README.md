@@ -4,7 +4,7 @@
 # to test your JavaScript knowledge
 
 ## screen shot
-!['screen shot'] (assets/Screen Shot 2022-03-27 at 7.43.49 PM.png)
+(a href = "./quiz-in-time/assets/screenshot.png")
 
 ## Website URL
 (https://mrperry365.github.io/quiz-in-time/)
