@@ -1,29 +1,30 @@
 // list of id's
-const startButton = document.getElementById('startQuiz')
-const highButton = document.getElementById('high-scores')
-
-
-// make a function to check if question is correct. if so go to next question. if not deduct time and then go to next question//
-
-// make a function to start quiz and timer when the start quiz button is clicked, once answered go to next question //
-// clicking button displays high scores//
+const startButton = document.getElementById('startQuiz');
+    $('#startQuiz').toggleClass('hide')
+    $('.content').toggleClass('hide')
+    $('questions-page').removeClass('hide')
+const highButton = document.getElementById('high-scores');
+var question = document.getElementById('question')
+var answer0 = document.getElementById('answer0');
+var answer1 = document.getElementById('answer1');
+var answer2 = document.getElementById('answer2');
+var answer3 = document.getElementById('answer3');
 
 highButton.addEventListener('click', highScores)
 startButton.addEventListener('click', startQuiz)
 
-function highScores() {
-console.log('Boom Boom!')
-if {
-    timeLeft > 0 ++ timeLeft > highScores(log.value);
+// function highScores() {
 
-    else {
-        return
-    }
-}
-};
+// if {
+//     (timeLeft > 0) ++ timeLeft > highScores(log.value);
+
+//     else {
+//         return
+//     }
+// }
+// };
 
 function startQuiz() {
-    console.log('Bang!!')
     
        
 }
@@ -41,7 +42,7 @@ function startQuiz() {
             clearInterval(interval)
         }
     }
-    }, 1000;
+    } 1000;
 
     startTimer(60);    
 
