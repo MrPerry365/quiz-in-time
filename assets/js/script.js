@@ -10,7 +10,7 @@
 
 // GIVEN I am taking a code quiz //
 // when page is loaded //
-// then display home screen //
+// ~then display home screen //
 
 
 // start option 1 of 2 - view high scores //
@@ -67,7 +67,33 @@ const answerButtons = document.getElementById('buttz')
 quizButton.addEventListener('click', startQuiz)
 
 
+// make variable and function for timer //
+const startTime = 1;
+let time = startTime * 60;
 
+const countdownEl = document.getElementById('countdown');
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 1 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = `${minutes}:${seconds}`;
+    time--;
+
+}
+
+//  var timeLeft = 60, timer = setInterval(function(){
+//     $("#counter").html(timeLeft--);
+//     if (timeLeft <=0) clearInterval(timer);
+        
+//     }, 1000);
+
+    // document.getElementById("time-left").value = 60 - timeLeft;
+    // timeLeft-= 1;
 
 // make functions for quiz //
     

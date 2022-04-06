@@ -9,6 +9,10 @@
 /* high score */
 
 /* time left */
+p {
+    font-size: 2rem;
+    font-family: fantasy;
+}
 
 /* header */
 header {
