@@ -1,54 +1,101 @@
-// list of id's
-const startButton = document.getElementById('startQuiz');
-    $('#startQuiz').toggleClass('hide')
-    $('.content').toggleClass('hide')
-    $('questions-page').removeClass('hide')
-const highButton = document.getElementById('high-scores');
-var question = document.getElementById('question')
-var answer0 = document.getElementById('answer0');
-var answer1 = document.getElementById('answer1');
-var answer2 = document.getElementById('answer2');
-var answer3 = document.getElementById('answer3');
 
-highButton.addEventListener('click', highScores)
-startButton.addEventListener('click', startQuiz)
 
-// function highScores() {
 
-// if {
-//     (timeLeft > 0) ++ timeLeft > highScores(log.value);
 
-//     else {
-//         return
-//     }
-// }
-// };
+
+
+
+// THEN I can save my initials and score
+
+
+// GIVEN I am taking a code quiz //
+// when page is loaded //
+// then display home screen //
+
+
+// start option 1 of 2 - view high scores //
+
+// when i click the high score button //
+// then hide home screen //
+// then display high scores and back button //
+
+// when user clicks back button //
+// then hide high scores //
+// then display home screen //
+// end option 1 of 2 //
+
+
+// start option 2 of 2 - start game //
+// WHEN I click the start button //
+// THEN a timer starts and I am presented with a question and answer buttons //
+
+// when answer button is clicked //
+// if I answer a question incorrectly //
+// then time is subtracted from timer //
+// THEN I am presented with another question //
+// If there is another question //
+// then display next question and answer buttons and repeat //
+
+// WHEN all questions are answered or the timer reaches 0 //
+// THEN the game is over //
+// then stop timer //
+// then hide question and answer buttons//
+// then display save high score //
+// - form input //
+// - submit button //
+// - return button //
+
+// when save button is clicked //
+// then initials and score are saved to local storage //
+// then hide save scores //
+// then display home screen //
+
+// when return button is clicked //
+// then hide save scores //
+// then display home screen //
+// end option 2 of 2 //
+
+// -------------------------------- //
+
+const quizButton = document.getElementById("start-quiz");
+//const homeContent = document.getElementById("#content");
+//const quizBox = document.getElementById("#quiz-box");
+const questionEl = document.getElementById('questions')
+let randomQuestion, currentQuestion
+const answerButtons = document.getElementById('buttz')
+
+quizButton.addEventListener('click', startQuiz)
+
+
+
+
+// make functions for quiz //
+    
+
 
 function startQuiz() {
-    startButton('clicked');
-    
-       
+    console.log('start')
+    randomQuestion = questions.sort(() => Math.random() - .5)
+    currentQuestion = 0
+    answerButtons.innerText = questions.question
+   
+    nextQuestion()
 }
 
 
-//make 60 second countdown timer with stop function when all questions are answered or out of time//
-
-    // function startTimer(seconds) {
-    // let time = seconds;
-
-    // const interval = setInterval(()) ==> {
-    //     counter--;
-
-    //     if(counter =< 0 ) {
-    //         clearInterval(interval)
-    //     }
-    // }
-    // } 1000;
-
-    // startTimer(60000);    
+function nextQuestion() {
+    showQuestion(randomQuestion[currentQuestion])
 
 
-//make function to replace high score with input text if true. if false prompt try again button//
+}
+
+function showQuestion(question) {
+    
+}
+
+function selectAnswer() {
+ answerButtons
+}
 
 
 //make arrays for 5 questions and answers //
@@ -89,10 +136,4 @@ let questions = [
 
     },
   
-  
 ] 
-
-    
-
-
-

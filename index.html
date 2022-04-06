@@ -4,56 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz-In-Time!</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-<!-- header section -->
+    
+    <!-- header section -->
     <header>
-<!-- high score -->
-        <button class="btn" id="high-scores">High Scores</button>
-<!-- time left -->
-        <div class ="timer" id="time-left">60</div>
-    </header>
+        <!-- high score -->
+                <button class="butt" id="high-scores">High Scores</button>
+        <!-- time left -->
+                <div class ="timer" id="time-left">60</div>
+            </header>
+        
+            <main>
+        <!-- Home page section -->
+            <section class="home">
 
-    <main>
-<!-- Home page section -->
-    <section class="home">
-        <article id="content">
-            <h1> Welcome to...</h1>
-            <h1> QUIZ-IN-TIME!</h1>
-            <button id="startQuiz">Start Quiz</button>
-            <ul>
-                <li> You start with 60 seconds on the clock</li>
-                <li> Answer a question wrong and you lose 10 seconds</li>
-                <li> Time left on the clock at the end is your High Score! </li>
-            </ul>
-        </article>
-    </section>
+                <article id="content" class="quiz-content hide">
+                    <h1> Welcome to...</h1>
+                    <h1> QUIZ-IN-TIME!</h1>
+                    <button id="start-quiz">Start Quiz</button>
+                    <ul>
+                        <li> You start with 60 seconds on the clock</li>
+                        <li> Answer a question wrong and you lose 10 seconds</li>
+                        <li> Time left on the clock at the end is your High Score! </li>
+                    </ul>
+                </article>
+                <article class="quiz-box hide">
+                    <div id="question-box" class="hide">
+                        <div id="questions">Questions</div>
+                        <div id="answer-buttons" class="button-layout">
+                            <button class="butt" id="buttz ">answer 0</button>
+                            <button class="butt" id="buttz">answer 1</button>
+                            <button class="butt" id="buttz">answer 2</button>
+                            <button class="butt" id="buttz">answer 3</button>
+                        </div>
+                    </div> 
+                </article>
 
-<!-- questions and multiple choice buttons -->
 
-    <section class="questions-page hide" >
-        <div id="time-left"></div>
-        <h1  id="question"></h1>
-        <button id="answer0"></button>
-        <button id="answer1"></button>
-        <button id="answer2"></button>
-        <button id="answer3"></button>
-    </section>
+            </section>
+        
 
-    </main>
-
-    <footer>
-<!-- correct or wrong answer confirmation -->
-
-    </footer>
-<!-- final score section -->
-
-<!-- -->
-
-    <script src="./assets/js/script.js"></script>
+    <script src ="./script.js"></script>
 </body>
 </html>

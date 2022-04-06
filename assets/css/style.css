@@ -37,13 +37,19 @@ main {
 }
 
 button {
-    font-size: large;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bolder;
     padding: 1.5rem;
     border-radius: 2rem;
     background-color: bisque;
 }
-/* correct or wrong */
 
+.quiz-content ul {
+    font-size: 1rem;
+    list-style: none;
+}
+
+/* correct or wrong */
+ 
 
 /* final score */
