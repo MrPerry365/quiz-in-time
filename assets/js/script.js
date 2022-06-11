@@ -57,15 +57,62 @@
 
 // -------------------------------- //
 
-const quizButton = document.getElementById("start-quiz");
-//const homeContent = document.getElementById("#content");
-//const quizBox = document.getElementById("#quiz-box");
-const questionEl = document.getElementById('questions')
-let randomQuestion, currentQuestion
-const answerButtons = document.getElementById('buttz')
 
+
+
+
+const quizButton = document.getElementById("start-quiz");
 quizButton.addEventListener('click', startQuiz)
 
+const questionEl = document.getElementById('question-box')
+let randomQuestion, currentQuestion
+
+const answerButtons = document.getElementById('button')
+
+
+
+
+
+
+
+// make functions for quiz //
+    
+
+
+function startQuiz() {
+    console.log('start')
+  
+    randomQuestion = questions.sort(() => Math.random() - .5)
+    currentQuestion = randomQuestion
+    answerButtons.innerText = questions.answer
+   
+    nextQuestion()
+}
+
+
+function nextQuestion() {
+    showQuestion(randomQuestion[currentQuestion])
+
+
+}
+
+function showQuestion(questions) {
+    questionEl.innerText = questions.question
+    questions.answerButtons.forEach(answer => {
+        const answerButtons = document.createElement('button')
+        button.innerText = answer.innerText
+        button.classList.add('button')
+    })
+    
+}
+
+function selectAnswer() {
+ answerButtons
+}
+
+// function (endQuiz) {
+
+// }
 
 // make variable and function for timer //
 const startTime = 1;
@@ -84,46 +131,11 @@ function updateCountdown() {
     countdownEl.innerHTML = `${minutes}:${seconds}`;
     time--;
 
-}
-
-//  var timeLeft = 60, timer = setInterval(function(){
-//     $("#counter").html(timeLeft--);
-//     if (timeLeft <=0) clearInterval(timer);
-        
-//     }, 1000);
-
-    // document.getElementById("time-left").value = 60 - timeLeft;
-    // timeLeft-= 1;
-
-// make functions for quiz //
-    
-
-
-function startQuiz() {
-    console.log('start')
-    randomQuestion = questions.sort(() => Math.random() - .5)
-    currentQuestion = 0
-    answerButtons.innerText = questions.question
-   
-    nextQuestion()
-}
-
-
-function nextQuestion() {
-    showQuestion(randomQuestion[currentQuestion])
-
+   if (time < 1) {
+        clearInterval(time);
+    }
 
 }
-
-function showQuestion(question) {
-    
-}
-
-function selectAnswer() {
- answerButtons
-}
-
-
 //make arrays for 5 questions and answers //
 
 let questions = [
@@ -163,3 +175,5 @@ let questions = [
     },
   
 ] 
+startQuiz ();
+
