@@ -20,31 +20,34 @@
         
             <main>
         <!-- Home page section -->
-            <section class="home">
+            <section id="quiz-area" class="home">
 
                 <article id="content" class="quiz-content hide">
                     <h1> Welcome to...</h1>
                     <h1> QUIZ-IN-TIME!</h1>
                     <button id="start-quiz">Start Quiz</button>
+                </article>
+                <article class="quiz-content hide">
                     <ul>
                         <li> You start with 60 seconds on the clock</li>
                         <li> Answer a question wrong and you lose 10 seconds</li>
                         <li> Time left on the clock at the end is your High Score! </li>
                     </ul>
                 </article>
-                <article class="quiz-box hide">
+                <article id="question-article" class="quiz-box hide">
                     <div id="question-box">
                         <div id="questions">Questions</div>
                         <div id="answer-buttons" class="button-layout">
-                            <button class="butt" id="buttz btn">answer 0</button>
-                            <button class="butt" id="buttz btn">answer 1</button>
-                            <button class="butt" id="buttz btn">answer 2</button>
-                            <button class="butt" id="buttz btn">answer 3</button>
+                            <button class="butt" id="btn0">answer 0</button>
+                            <button class="butt" id="btn1">answer 1</button>
+                            <button class="butt" id="btn2">answer 2</button>
+                            <button class="butt" id="btn3">answer 3</button>
                         </div>
                     </div> 
                 </article>
-
-
+            </section>
+            <section id="score-screen" class="home">
+                <button id="restart-quiz" class="button">Restart</button>
             </section>
         
 

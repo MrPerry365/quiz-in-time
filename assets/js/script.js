@@ -64,14 +64,26 @@
 const quizButton = document.getElementById("start-quiz");
 quizButton.addEventListener('click', startQuiz)
 
-const questionEl = document.getElementById('question-box')
-let randomQuestion, currentQuestion
+// const questionEl = document.getElementById('question-box')
+let randomizedQuestionArray, currentQuestion
 
-const answerButtons = document.getElementById('button')
+// const answerButtons = document.getElementById('button')
+
+let global_index = 0
+let correctAnswers = 0
 
 
+$(document).ready(function() { 
+    $("#restart-quiz").click(function() {
+        $("#content").show()
+        $("#question-article").hide()
+        global_index = 0
+        correctAnswers = 0
+    })
 
-
+    $("#question-article").hide()
+    $("#score-screen").hide()
+});
 
 
 
@@ -80,34 +92,71 @@ const answerButtons = document.getElementById('button')
 
 
 function startQuiz() {
-    console.log('start')
-  
-    randomQuestion = questions.sort(() => Math.random() - .5)
-    currentQuestion = randomQuestion
-    answerButtons.innerText = questions.answer
-   
-    nextQuestion()
-}
+    console.log('start' + global_index)
+    $("#content").hide()
+    $("#question-article").show()
 
+    randomizedQuestionArray = questions.sort(() => Math.random() - .5)
 
-function nextQuestion() {
-    showQuestion(randomQuestion[currentQuestion])
-
-
-}
-
-function showQuestion(questions) {
-    questionEl.innerText = questions.question
-    questions.answerButtons.forEach(answer => {
-        const answerButtons = document.createElement('button')
-        button.innerText = answer.innerText
-        button.classList.add('button')
-    })
+    for(let i = 0; i < 4; i++) {
+        button = $("#btn" + i)
+        button.click(function() {
+            selectAnswer(i)
+            console.log(i + "answer button clicked: " + currentQuestion.answer[i] + " = " + currentQuestion.question)
+        })
+    }
     
+    showQuestion(global_index)
+       
+    // randomQuestions = questions.sort(() => Math.random() - .5)
+    // currentQuestion = randomQuestion
+    // // answerButtons.innerText = questions.answer
+    // $("#questions").text(currentQuestion.question)
+    // // for( declare iterator, loop conditional, loop iterator) { }
+    // for(let i = 0; i < currentQuestion.answer.length; i++) {
+
+    // }
+   
+    // nextQuestion()
 }
 
-function selectAnswer() {
- answerButtons
+
+// function nextQuestion() {
+//     showQuestion(randomQuestion[currentQuestion])
+// }
+
+function showQuestion(index) {
+    // questionEl.innerText = questions.question
+    // questions.answerButtons.forEach(answer => {
+    //     const answerButtons = document.createElement('button')
+    //     button.innerText = answer.innerText
+    //     button.classList.add('button')
+    // })
+
+    currentQuestion = randomizedQuestionArray[index]
+    $("#questions").text(currentQuestion.question)
+    for(let i = 0; i < currentQuestion.answer.length; i++) {
+        button = $("#btn" + i)
+        button.text(currentQuestion.answer[i])
+    }
+    global_index++
+}
+
+function selectAnswer(index) {
+   if(currentQuestion.correctAnswer === index) {
+    correctAnswers++
+   }
+
+   if(global_index >= randomizedQuestionArray.length) {
+    endQuiz()
+   } else {
+    showQuestion(global_index)
+   }
+}
+
+function endQuiz() {
+    $("#question-article").hide()
+    $("#score-screen").show().prepend("You finished the quiz with " + correctAnswers + " out of " + randomizedQuestionArray.length + ".")
 }
 
 // function (endQuiz) {
@@ -120,22 +169,22 @@ let time = startTime * 60;
 
 const countdownEl = document.getElementById('countdown');
 
-setInterval(updateCountdown, 1000);
+// setInterval(updateCountdown, 1000);
 
-function updateCountdown() {
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
+// function updateCountdown() {
+//     const minutes = Math.floor(time / 60);
+//     let seconds = time % 60;
 
-    seconds = seconds < 1 ? '0' + seconds : seconds;
+//     seconds = seconds < 1 ? '0' + seconds : seconds;
 
-    countdownEl.innerHTML = `${minutes}:${seconds}`;
-    time--;
+//     countdownEl.innerHTML = `${minutes}:${seconds}`;
+//     time--;
 
-   if (time < 1) {
-        clearInterval(time);
-    }
+//    if (time < 1) {
+//         clearInterval(time);
+//     }
 
-}
+// }
 //make arrays for 5 questions and answers //
 
 let questions = [
@@ -175,5 +224,5 @@ let questions = [
     },
   
 ] 
-startQuiz ();
+
 
